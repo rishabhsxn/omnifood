@@ -104,12 +104,31 @@ body {
 }
 
 /***************************************/
+/* HEADER */
+/***************************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+
+  /* Keeping height constant because header will be made sticky */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/***************************************/
 /* HERO SECTION */
 /***************************************/
 
 .section-hero {
   background-color: #fdf2e9;
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 .hero {
@@ -119,6 +138,7 @@ body {
   gap: 9.6rem;
   align-items: center;
   margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .hero-description {
