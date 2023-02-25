@@ -143,6 +143,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.step-img-box::before {
+  background-color: #fdf3e9;
+  width: 60%;
+  /* height: 50% won't work because for height to be defined as percentage, parent element should have explicitly defined height
+  
+  padding is percentage of element's width, therefore padding-bottom will work as height*/
+  padding-bottom: 60%;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  background-color: #fae5d3;
+  width: 45%;
+  padding-bottom: 45%;
+  z-index: -1;
 }
 
 .step-img {
