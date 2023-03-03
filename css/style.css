@@ -538,3 +538,8 @@
   background-color: #fae5d3;
   color: #45260a;
 }
+
+.cta-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(250, 229, 211, 0.5);
+}
