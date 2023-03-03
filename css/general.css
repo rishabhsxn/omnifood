@@ -20,9 +20,9 @@ default: 1
 --- 02 COLORS
 Primary: #e67e22
 Tints: #fdf2e9
-Shades: #cf711f
+Shades: #cf711f  #45260a
 Accents:
-Greys: #555 #333 #6f6f6f
+Greys: #555 #333 #6f6f6f #aaa;
 
 
 --- 05 SHADOWS
@@ -167,6 +167,7 @@ strong {
   text-decoration: line-through;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -175,6 +176,10 @@ strong {
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
+  /* for btn only */
+  border: none;
+  cursor: pointer;
 
   /* We put transition in original state */
   transition: background-color 0.3s;
