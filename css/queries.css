@@ -191,3 +191,42 @@ Use em in media queries because of consistent behavior*/
     font-size: 3rem;
   }
 }
+
+/***************************************/
+/* Below 704px (Smaller Tablets) */
+/***************************************/
+
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .diets {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+}
