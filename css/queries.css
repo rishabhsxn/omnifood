@@ -136,6 +136,10 @@ Use em in media queries because of consistent behavior*/
     display: block;
   }
 
+  .header {
+    position: relative;
+  }
+
   .main-nav {
     background-color: #fff;
     position: absolute;
@@ -146,7 +150,7 @@ Use em in media queries because of consistent behavior*/
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in;
 
     /* Hide the Nav without using display: none */
     /* 1. Hide visually */
@@ -155,12 +159,17 @@ Use em in media queries because of consistent behavior*/
     pointer-events: none;
     /* 3. Hide from Screen readers */
     visibility: hidden;
+
+    /* Move it to right side of screen */
+    transform: translateX(100%);
   }
 
   .nav-open .main-nav {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
+
+    transform: translateX(0);
   }
 
   .nav-open .icon-mobile-nav[name='close-outline'] {
