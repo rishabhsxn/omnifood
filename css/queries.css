@@ -134,6 +134,7 @@ Use em in media queries because of consistent behavior*/
 
   .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
 
   .header {
