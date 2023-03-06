@@ -11,6 +11,36 @@ btnNavEl.addEventListener('click', function () {
   headerEl.classList.toggle('nav-open');
 });
 
+// Smooth Scrolling for Safari and Edge browsers
+const allLinks = document.querySelectorAll('a:link');
+
+allLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    // prevent default behavior
+    event.preventDefault();
+    const href = link.getAttribute('href');
+
+    // scroll to Top
+    if (href === '#') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    } else if (href.startsWith('#')) {
+      // scroll to sections
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+
+    // if nav link, close navigation panel for mobile
+    if (link.classList.contains('main-nav-link') && headerEl.classList.contains('nav-open')) {
+      headerEl.classList.remove('nav-open');
+    }
+  });
+});
+
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {

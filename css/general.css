@@ -43,7 +43,8 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 
-  scroll-behavior: smooth;
+  /* DOES NOT WORK FOR SAFARI AND EDGE */
+  /* scroll-behavior: smooth; */
 }
 
 * {
