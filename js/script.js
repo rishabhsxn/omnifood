@@ -67,6 +67,7 @@ intersectionObserver.observe(sectionHeroEl);
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
+// This will add no-flexbox-gap class to body for browsers that do not support flexbox gap
 function checkFlexGap() {
   var flex = document.createElement('div');
   flex.style.display = 'flex';
